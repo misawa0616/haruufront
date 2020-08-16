@@ -1,0 +1,31 @@
+<template>
+  <div class="login">
+    <section class="section-area">
+      <div class="wrapp-pc-only">
+        <div class="common-block">
+          <div class="common-table-block color-none">確認メールを送信しました。URLの期限は1日です。</div>
+        </div>
+        <ul class="side-page-link-list">
+          <li class="next">
+            <button v-on:click="clickNext" class="btn">
+              <strong>次へ</strong>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</template>
+<script>
+export default {
+  middleware: ["user_auth"],
+  name: "EmailChangeConfirm",
+  methods: {
+    clickNext() {
+      this.$router.push("/");
+    },
+  },
+};
+</script>
+<style>
+</style>

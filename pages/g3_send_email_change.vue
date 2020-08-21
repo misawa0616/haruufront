@@ -22,7 +22,7 @@ export default {
   name: "EmailChangeConfirm",
   methods: {
     clickNext() {
-      this.$router.push("/");
+      this.$router.push("/g4_favorite");
     },
   },
 };

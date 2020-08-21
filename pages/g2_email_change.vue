@@ -45,6 +45,7 @@
                         id="id_after_change_email"
                         v-model="afterChangeEmail"
                         v-bind:class="{ error: afterChangeEmailErrors }"
+                        class="input-base"
                       />
                     </div>
                   </td>
@@ -69,6 +70,7 @@
                         id="id_after_change_email_confirm"
                         v-model="afterChangeEmailConfirm"
                         v-bind:class="{ error: afterChangeEmailConfirmErrors }"
+                        class="input-base"
                       />
                     </div>
                   </td>
@@ -89,6 +91,7 @@
                         id="id_password"
                         v-model="password"
                         v-bind:class="{ error: passwordErrors }"
+                        class="input-base"
                       />
                     </div>
                   </td>
@@ -98,7 +101,7 @@
           </div>
           <ul class="side-page-link-list">
             <li class="return">
-              <button class="btn">
+              <button v-on:click="clickBack" class="btn">
                 <strong>戻る</strong>
               </button>
             </li>
@@ -133,6 +136,9 @@ export default {
     };
   },
   methods: {
+    clickBack() {
+      this.$router.push("/g4_favorite");
+    },
     clearError() {
       this.messages = "";
       this.afterChangeEmailErrors = "";

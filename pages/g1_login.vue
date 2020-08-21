@@ -1,11 +1,11 @@
 <template>
   <div class="login">
     <navi />
-    <div class="main">
+    <div class="login-main">
       <div style="text-align:center;">
         <Logo />
         <p>
-          <strong>このページはNuxtJS + DRFで作成されています。</strong>
+          <strong>このサイトはNuxtJS + DRFで作成されています。</strong>
         </p>
       </div>
       <br />
@@ -54,6 +54,7 @@
                         id="email"
                         v-model="email"
                         v-bind:class="{ error: emailErrors }"
+                        class="input-base"
                       />
                     </div>
                   </td>
@@ -74,6 +75,7 @@
                         id="id_password"
                         v-model="password"
                         v-bind:class="{ error: passwordErrors }"
+                        class="input-base"
                       />
                     </div>
                   </td>
@@ -183,7 +185,7 @@ export default {
 };
 </script>
 <style scoped>
-.main {
+.login-main {
   width: 60%;
   display: inline-block;
 }

@@ -14,7 +14,7 @@
 html {
   font-size: 20px;
 }
-input {
+.input-base {
   border: 0.1rem #aaa solid;
   border-radius: 0.2rem;
   height: 2.5rem;
@@ -47,11 +47,14 @@ section {
   width: 100%;
 }
 .common-table-block table td {
-  padding: 0.1rem 0.12rem 1.5rem;
+  padding: 0 0.12rem 1.5rem;
 }
 .common-table-block table td .row-input {
-  padding-top: 0.8rem;
+  padding-top: 0.75rem;
   padding-left: 1rem;
+}
+.common-table-block table td .row-input.error {
+  padding-top: 0;
 }
 .common-table-block table td .row-txt {
   padding-top: 1.4rem;
@@ -134,5 +137,58 @@ input.error {
 }
 :focus {
   outline: none;
+}
+.edit.icon {
+  color: white;
+  position: absolute;
+  margin-left: 0;
+  margin-top: 0px;
+  width: 14px;
+  height: 4px;
+  border-radius: 1px;
+  border: solid 1px currentColor;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.edit.icon:before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: -1px;
+  width: 0px;
+  height: 2px;
+  border-left: solid 5px transparent;
+  border-right: solid 5px currentColor;
+  border-top: solid 2px transparent;
+  border-bottom: solid 2px transparent;
+}
+.remove.icon {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+.remove.icon:before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 1px;
+  background-color: currentColor;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.remove.icon.is-active:before {
+  transform: none;
+}
+.remove.icon:after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 1px;
+  background-color: currentColor;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.remove.icon.is-active:after {
+  transform: none;
 }
 </style>

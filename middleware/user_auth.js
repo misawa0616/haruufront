@@ -10,6 +10,7 @@ export default function ({ $axios, store, redirect, router }) {
             })
             .catch(function (e) {
                 store.dispatch("message/updateMessageAction", "有効なログイン情報を取得できませんでした。ログインしてください。");
+                console.log('Token ' + localStorage.getItem('token'));
                 return redirect('/g1_login')
             })
     });

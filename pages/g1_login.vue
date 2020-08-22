@@ -103,7 +103,7 @@ const axios = axiosBase.create({
     "Content-Type": "application/json",
   },
 });
-let url = "http://54.226.195.187/api/v1/rest_auth/login/";
+let url = "http://54.226.195.187:8000/api/v1/rest_auth/login/";
 
 export default {
   data: function () {

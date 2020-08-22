@@ -147,7 +147,7 @@ export default {
             password: this.password,
           })
           .then((res) => {
-            sessionStorage.setItem("token", res.data.key);
+            localStorage.setItem("token", res.data.key);
             this.$router.push("/g4_favorite");
           })
           .catch((e) => {

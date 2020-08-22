@@ -6,7 +6,7 @@ export default {
   mode: 'spa',
   target: 'server',
   head: {
-    title: 'HaruuProject',
+    title: 'FavoriteTag',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

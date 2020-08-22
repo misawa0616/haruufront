@@ -172,14 +172,12 @@ export default {
     if (this.$store.getters["message/getMessage"]) {
       this.messages = [this.$store.getters["message/getMessage"]];
       this.$store.dispatch("message/updateMessageAction", "");
-      console.log("Mount");
     }
   },
   beforeUpdate() {
     if (this.$store.getters["message/getMessage"]) {
       this.messages = [this.$store.getters["message/getMessage"]];
       this.$store.dispatch("message/updateMessageAction", "");
-      console.log("Update");
     }
   },
 };

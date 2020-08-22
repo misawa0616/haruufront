@@ -1,6 +1,7 @@
 export default function ({ $axios, store, redirect, router }) {
     let url = "/api/v1/test/";
     return new Promise((resolve) => {
+        console.log('Token ' + localStorage.getItem('token'))
         $axios.get(url)
             .then(function (res) {
                 store.dispatch("user/updateUserAction", res.data);

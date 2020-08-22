@@ -32,7 +32,7 @@ export default {
   build: {
   },
   axios: {
-    baseURL: 'http://54.226.195.187'
+    baseURL: 'https://54.226.195.187'
   },
   auth: {
     strategies: {

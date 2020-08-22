@@ -118,7 +118,7 @@
 </template>
 
 <script>
-let url = "http://localhost:8000/api/v1/change_email/";
+let url = "/api/v1/change_email/";
 
 export default {
   middleware: ["user_auth"],

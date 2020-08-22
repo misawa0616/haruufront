@@ -100,7 +100,7 @@
 </template>
 
 <script>
-let url = "http://localhost:8000/api/v1/favorite_editor/";
+let url = "/api/v1/favorite_editor/";
 
 export default {
   middleware: ["user_auth"],

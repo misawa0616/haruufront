@@ -80,7 +80,7 @@
 </template>
 
 <script>
-let url = "http://localhost:8000/api/v1/favorite_register/";
+let url = "/api/v1/favorite_register/";
 
 export default {
   middleware: ["user_auth"],

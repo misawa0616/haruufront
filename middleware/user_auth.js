@@ -1,5 +1,5 @@
 export default function ({ $axios, store, redirect, router }) {
-    let url = 'http://localhost:8000/api/v1/test/';
+    let url = "/api/v1/test/";
     return new Promise((resolve) => {
         $axios.get(url)
             .then(function (res) {

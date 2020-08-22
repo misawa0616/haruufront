@@ -31,7 +31,7 @@
             <strong>サインアップ</strong>
           </nuxt-link>
           <nuxt-link class="navbar-button__body navbar-button__primary" to="/g1_login">
-            <strong>ログイン</strong>
+            <strong>サインイン</strong>
           </nuxt-link>
         </div>
       </div>

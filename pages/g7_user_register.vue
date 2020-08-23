@@ -85,7 +85,7 @@
             </li>
             <li class="next">
               <button v-on:click="clickNext" class="btn">
-                <strong>登録</strong>
+                <strong>次へ</strong>
               </button>
             </li>
           </ul>

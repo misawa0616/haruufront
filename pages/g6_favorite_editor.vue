@@ -196,10 +196,6 @@ export default {
 </script>
 
 <style scoped>
-.main {
-  width: 60%;
-  display: inline-block;
-}
 a {
   border-radius: 5px;
   display: -webkit-box;

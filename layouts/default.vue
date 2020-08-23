@@ -162,6 +162,10 @@ input.error {
   border-top: solid 2px transparent;
   border-bottom: solid 2px transparent;
 }
+.main {
+  width: 60%;
+  display: inline-block;
+}
 .remove.icon {
   display: flex;
   justify-content: center;

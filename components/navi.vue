@@ -27,7 +27,7 @@
       </div>
       <div class="navbar-end">
         <div class="navbar-item__body navbar-item__color">
-          <nuxt-link class="navbar-button__body navbar-button__primary" to="/g1_login">
+          <nuxt-link class="navbar-button__body navbar-button__primary" to="/g7_user_register">
             <strong>サインアップ</strong>
           </nuxt-link>
           <nuxt-link class="navbar-button__body navbar-button__primary" to="/g1_login">

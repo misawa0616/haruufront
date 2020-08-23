@@ -1,13 +1,7 @@
 <template>
-  <div class="login">
+  <div class="user_register">
     <navi />
     <div class="main">
-      <div style="text-align:center;">
-        <Logo />
-        <p>
-          <strong>このサイトはNuxtJS + DRFで作成されています。</strong>
-        </p>
-      </div>
       <br />
       <br />
       <section class="note-error-area">
@@ -84,9 +78,14 @@
             </div>
           </div>
           <ul class="side-page-link-list">
+            <li class="return">
+              <button v-on:click="clickBack" class="btn">
+                <strong>戻る</strong>
+              </button>
+            </li>
             <li class="next">
               <button v-on:click="clickNext" class="btn">
-                <strong>ログイン</strong>
+                <strong>登録</strong>
               </button>
             </li>
           </ul>
@@ -103,7 +102,7 @@ const axios = axiosBase.create({
     "Content-Type": "application/json",
   },
 });
-let url = "https://favoritetag.xyz/api/v1/rest_auth/login/";
+let url = "https://favoritetag.xyz/api/v1/user_register/";
 
 export default {
   data: function () {
@@ -116,6 +115,9 @@ export default {
     };
   },
   methods: {
+    clickBack() {
+      this.$router.push("/g1_login");
+    },
     clearError() {
       this.messages = "";
       this.emailErrors = "";
@@ -147,8 +149,7 @@ export default {
             password: this.password,
           })
           .then((res) => {
-            localStorage.setItem("token", res.data.key);
-            this.$router.push("/g4_favorite");
+            this.$router.push("/g8_user_done");
           })
           .catch((e) => {
             if (e.response.data.email) {

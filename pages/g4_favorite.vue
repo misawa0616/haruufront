@@ -1,7 +1,7 @@
 <template>
   <div class="favorite">
     <navi />
-    <div class="favorite-main">
+    <div class="main">
       <br />
       <strong>お気に入り</strong>
       <hr />
@@ -120,10 +120,6 @@ export default {
   background-color: #d100c3;
   border-color: transparent;
   color: #fff;
-}
-.favorite-main {
-  width: 60%;
-  display: inline-block;
 }
 .favorite-tag {
   margin-left: 1%;

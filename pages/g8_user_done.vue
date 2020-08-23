@@ -1,5 +1,5 @@
 <template>
-  <div class="login">
+  <div class="user_done">
     <navi />
     <div class="main">
       <section class="section-area">
@@ -10,7 +10,7 @@
           <ul class="side-page-link-list">
             <li class="next">
               <button v-on:click="clickNext" class="btn">
-                <strong>ホーム</strong>
+                <strong>ログイン</strong>
               </button>
             </li>
           </ul>
@@ -21,11 +21,9 @@
 </template>
 <script>
 export default {
-  middleware: ["user_auth"],
-  name: "EmailChangeConfirm",
   methods: {
     clickNext() {
-      this.$router.push("/g4_favorite");
+      this.$router.push("/g1_login");
     },
   },
 };

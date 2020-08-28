@@ -63,7 +63,7 @@ section {
 .common-table-block table th {
   text-align: left;
   padding-top: 1.4rem;
-  padding-left: 4rem;
+  width: 11rem;
 }
 .err-msg {
   color: #d41414;
@@ -126,7 +126,14 @@ input.error {
 .wrapp,
 .wrapp-pc-only {
   margin: auto;
-  width: 50rem;
+  width: 40rem;
+  margin-left: calc(50% - 500px);
+}
+@media screen and (max-width: 1200px) {
+  .wrapp,
+  .wrapp-pc-only {
+    margin-left: 0;
+  }
 }
 .wrapp:after,
 .wrapp-pc-only:after {
@@ -163,8 +170,8 @@ input.error {
   border-bottom: solid 2px transparent;
 }
 .main {
-  width: 60%;
   display: inline-block;
+  flex: 1;
 }
 .remove.icon {
   display: flex;

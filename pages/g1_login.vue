@@ -2,11 +2,15 @@
   <div class="login">
     <navi />
     <div class="main">
-      <div style="text-align:center;">
-        <Logo />
-        <p>
+      <div class="wrapp">
+        <div class="side-page-link-list">
+          <Logo />
+        </div>
+      </div>
+      <div class="wrapp">
+        <div class="side-page-link-list">
           <strong>このサイトはNuxtJS + DRFで作成されています。</strong>
-        </p>
+        </div>
       </div>
       <br />
       <br />
@@ -183,4 +187,7 @@ export default {
 };
 </script>
 <style scoped>
+.login {
+  display: flex;
+}
 </style>

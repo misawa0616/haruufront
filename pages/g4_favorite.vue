@@ -2,32 +2,34 @@
   <div class="favorite">
     <navi />
     <div class="main">
-      <br />
-      <strong>お気に入り</strong>
-      <hr />
-      <div v-for="(tag, key) in tags" :key="key" class="favorite-tag">
-        <a
-          class="favorite-button__body"
-          v-bind:href="tag.favoriteUrl"
-          v-bind:class="{ 'favorite-button__primary': key%4 == 0,
+      <div class="wrapp-pc-only">
+        <br />
+        <strong>お気に入り</strong>
+        <hr />
+        <div v-for="(tag, key) in tags" :key="key" class="favorite-tag">
+          <a
+            class="favorite-button__body"
+            v-bind:href="tag.favoriteUrl"
+            v-bind:class="{ 'favorite-button__primary': key%4 == 0,
           'favorite-button__secondary': key%4 == 1,
           'favorite-button__tertiary' : key%4 == 2,
           'favorite-button__quaternary' : key%4 == 3}"
-        >
-          <strong>{{ tag.favoriteTitle }}</strong>
-        </a>
-      </div>
-      <div class="favorite-tag-add">
-        <nuxt-link class="favorite-add__body favorite-add__color" to="/g5_favorite_register">+</nuxt-link>
-      </div>
-      <div>
-        <div class="favorite-tag-add">
-          <nuxt-link class="favorite-add__body favorite-add__color" to="/g6_favorite_editor">
-            <div class="edit icon"></div>
-          </nuxt-link>
+          >
+            <strong>{{ tag.favoriteTitle }}</strong>
+          </a>
         </div>
+        <div class="favorite-tag-add">
+          <nuxt-link class="favorite-add__body favorite-add__color" to="/g5_favorite_register">+</nuxt-link>
+        </div>
+        <div>
+          <div class="favorite-tag-add">
+            <nuxt-link class="favorite-add__body favorite-add__color" to="/g6_favorite_editor">
+              <div class="edit icon"></div>
+            </nuxt-link>
+          </div>
+        </div>
+        <hr />
       </div>
-      <hr />
     </div>
   </div>
 </template>
@@ -44,6 +46,9 @@ export default {
 </script>
 
 <style>
+.favorite {
+  display: flex;
+}
 .favorite-add__body {
   border-radius: 50% !important;
   display: inline-block;

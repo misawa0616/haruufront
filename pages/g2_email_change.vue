@@ -229,4 +229,7 @@ a {
   display: -ms-flexbox;
   display: flex;
 }
+.email_change {
+  display: flex;
+}
 </style>

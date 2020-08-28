@@ -196,6 +196,9 @@ export default {
 </script>
 
 <style scoped>
+.g6_favorite_editor {
+  display: flex;
+}
 a {
   border-radius: 5px;
   display: -webkit-box;
@@ -248,7 +251,7 @@ a {
   font-family: inherit;
   background-color: #fff;
   font-size: 1rem;
-  width: 30rem;
+  width: 22rem;
 }
 .favorite-input-url.error {
   background-color: #fff5f5;

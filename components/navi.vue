@@ -55,7 +55,7 @@ export default {
 }
 .navbar-main {
   vertical-align: top;
-  width: 20%;
+  width: 10rem;
   display: inline-block;
 }
 .navbar-button__body {
@@ -103,10 +103,10 @@ export default {
 .navbar-menu__body {
   width: 100%;
   padding: 0.5rem 0;
-  display: none;
+  visibility: hidden;
 }
 .navbar-menu__body.is-active {
-  display: block;
+  visibility: visible;
 }
 .navbar-menu__color {
   background-color: #fff;

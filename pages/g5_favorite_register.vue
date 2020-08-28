@@ -167,6 +167,9 @@ a {
   display: -ms-flexbox;
   display: flex;
 }
+.favorite_register {
+  display: flex;
+}
 .favorite-input-title__body {
   border-radius: 0.2rem;
   height: 2.5rem;
@@ -184,7 +187,7 @@ a {
   font-family: inherit;
   background-color: #fff;
   font-size: 1rem;
-  width: 30rem;
+  width: 22rem;
 }
 .favorite-input-title__color.error {
   background-color: #fff5f5;

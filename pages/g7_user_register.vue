@@ -184,4 +184,7 @@ export default {
 };
 </script>
 <style scoped>
+.user_register {
+  display: flex;
+}
 </style>

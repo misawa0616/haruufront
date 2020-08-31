@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar-main">
+  <div class="navbar-main" v-bind:class="{'is-active': isOpen}">
     <a
       class="navbar-burger__body navbar-burger__color"
       aria-label="menu"
@@ -58,6 +58,9 @@ export default {
   width: 10rem;
   display: inline-block;
 }
+.navbar-main.is-active {
+  z-index: 1;
+}
 .navbar-button__body {
   border: 1px solid transparent;
   border-radius: 4px;
@@ -110,7 +113,7 @@ export default {
 }
 .navbar-menu__color {
   background-color: #fff;
-  box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
+  box-shadow: 0 0px 16px rgba(50, 59, 50, 0.5);
 }
 .navbar-burger__body {
   cursor: pointer;

@@ -7,9 +7,11 @@
           <Logo />
         </div>
       </div>
-      <div class="wrapp">
-        <div class="side-page-link-list">
-          <strong>このサイトはNuxtJS + DRFで作成されています。</strong>
+      <div class="sub-logo">
+        <div class="wrapp">
+          <div class="side-page-link-list">
+            <strong>このサイトはNuxtJS + DRFで作成されています。</strong>
+          </div>
         </div>
       </div>
       <br />
@@ -189,5 +191,10 @@ export default {
 <style scoped>
 .login {
   display: flex;
+}
+@media screen and (max-width: 800px) {
+  .sub-logo {
+    display: none;
+  }
 }
 </style>

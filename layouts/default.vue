@@ -14,14 +14,30 @@
 html {
   font-size: 20px;
 }
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 10px;
+  }
+}
 .input-base {
-  border: 0.1rem #aaa solid;
+  border: 0.1rem solid #aaa;
   border-radius: 0.2rem;
   height: 2.5rem;
   font-family: inherit;
   background-color: #fff;
   font-size: 1rem;
   width: 20rem;
+}
+@media screen and (max-width: 800px) {
+  .input-base {
+    border: 0.1rem #aaa solid;
+    border-radius: 0.2rem;
+    height: 2.5rem;
+    font-family: inherit;
+    background-color: #fff;
+    font-size: 1rem;
+    width: 100%;
+  }
 }
 button,
 a {
@@ -49,6 +65,11 @@ section {
 .common-table-block table td {
   padding: 0 0.12rem 1.5rem;
 }
+@media screen and (max-width: 800px) {
+  .common-table-block table td {
+    display: block;
+  }
+}
 .common-table-block table td .row-input {
   padding-top: 0.75rem;
   padding-left: 1rem;
@@ -64,6 +85,11 @@ section {
   text-align: left;
   padding-top: 1.4rem;
   width: 11rem;
+}
+@media screen and (max-width: 800px) {
+  .common-table-block table th {
+    display: block;
+  }
 }
 .err-msg {
   color: #d41414;
@@ -123,6 +149,11 @@ input.error {
   background-color: #1892e2;
   padding: 1.2rem 0.05rem;
 }
+@media screen and (max-width: 800px) {
+  .side-page-link-list li.next {
+    width: 80%;
+  }
+}
 .wrapp,
 .wrapp-pc-only {
   margin: auto;
@@ -133,6 +164,12 @@ input.error {
   .wrapp,
   .wrapp-pc-only {
     margin-left: 0;
+  }
+}
+@media screen and (max-width: 800px) {
+  .wrapp,
+  .wrapp-pc-only {
+    width: 65%;
   }
 }
 .wrapp:after,
@@ -150,8 +187,8 @@ input.error {
   position: absolute;
   margin-left: 0;
   margin-top: 0px;
-  width: 14px;
-  height: 4px;
+  width: 0.7rem;
+  height: 0.2rem;
   border-radius: 1px;
   border: solid 1px currentColor;
   -webkit-transform: rotate(-45deg);
@@ -163,11 +200,16 @@ input.error {
   left: -12px;
   top: -1px;
   width: 0px;
-  height: 2px;
+  height: 0.1rem;
   border-left: solid 5px transparent;
   border-right: solid 5px currentColor;
   border-top: solid 2px transparent;
   border-bottom: solid 2px transparent;
+}
+@media screen and (max-width: 800px) {
+  .edit.icon:before {
+    height: 0rem;
+  }
 }
 .main {
   display: inline-block;

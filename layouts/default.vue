@@ -220,11 +220,6 @@ input.error {
   border-top: solid 2px transparent;
   border-bottom: solid 2px transparent;
 }
-@media screen and (max-width: 767px) {
-  .edit.icon:before {
-    height: 0rem;
-  }
-}
 .main {
   display: inline-block;
   flex: 1;

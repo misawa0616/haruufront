@@ -192,7 +192,7 @@ export default {
 .login {
   display: flex;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 767px) {
   .sub-logo {
     display: none;
   }

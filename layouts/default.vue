@@ -13,6 +13,12 @@
 }
 html {
   font-size: 20px;
+  min-height: 1100px;
+}
+@media screen and (max-width: 767px) {
+  html {
+    min-height: 0;
+  }
 }
 .input-base {
   border: 0.1rem solid #aaa;
@@ -23,7 +29,7 @@ html {
   font-size: 1rem;
   width: 20rem;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 767px) {
   .input-base {
     border: 0.1rem #aaa solid;
     border-radius: 0.2rem;
@@ -60,7 +66,7 @@ section {
 .common-table-block table td {
   padding: 0 0.12rem 1.5rem;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 767px) {
   .common-table-block table td {
     display: block;
   }
@@ -69,7 +75,7 @@ section {
   padding-top: 0.75rem;
   padding-left: 1rem;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 767px) {
   .common-table-block table td .row-input {
     padding-left: 0;
   }
@@ -86,7 +92,7 @@ section {
   padding-top: 1.4rem;
   width: 11rem;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 767px) {
   .common-table-block table th {
     display: block;
     width: 100%;
@@ -130,7 +136,7 @@ input.error {
 .side-page-link-list {
   text-align: center;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 767px) {
   .side-page-link-list {
     text-align: left;
     margin-left: -40px;
@@ -159,7 +165,7 @@ input.error {
   background-color: #1892e2;
   padding: 1.2rem 0.05rem;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 767px) {
   .side-page-link-list li.next .btn {
     padding: 0.5rem 0.05rem;
   }
@@ -176,7 +182,7 @@ input.error {
     margin-left: 0;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 767px) {
   .wrapp,
   .wrapp-pc-only {
     width: calc(100% + 100px);
@@ -214,7 +220,7 @@ input.error {
   border-top: solid 2px transparent;
   border-bottom: solid 2px transparent;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 767px) {
   .edit.icon:before {
     height: 0rem;
   }

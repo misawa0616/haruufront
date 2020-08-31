@@ -14,11 +14,6 @@
 html {
   font-size: 20px;
 }
-@media screen and (max-width: 800px) {
-  html {
-    font-size: 10px;
-  }
-}
 .input-base {
   border: 0.1rem solid #aaa;
   border-radius: 0.2rem;
@@ -32,7 +27,7 @@ html {
   .input-base {
     border: 0.1rem #aaa solid;
     border-radius: 0.2rem;
-    height: 2.5rem;
+    height: 1.5rem;
     font-family: inherit;
     background-color: #fff;
     font-size: 1rem;
@@ -74,6 +69,11 @@ section {
   padding-top: 0.75rem;
   padding-left: 1rem;
 }
+@media screen and (max-width: 800px) {
+  .common-table-block table td .row-input {
+    padding-left: 0;
+  }
+}
 .common-table-block table td .row-input.error {
   padding-top: 0;
 }
@@ -89,6 +89,7 @@ section {
 @media screen and (max-width: 800px) {
   .common-table-block table th {
     display: block;
+    width: 100%;
   }
 }
 .err-msg {
@@ -129,6 +130,12 @@ input.error {
 .side-page-link-list {
   text-align: center;
 }
+@media screen and (max-width: 800px) {
+  .side-page-link-list {
+    text-align: left;
+    margin-left: -40px;
+  }
+}
 .side-page-link-list li {
   position: relative;
   display: inline-block;
@@ -145,13 +152,16 @@ input.error {
   background-color: #aaa;
   font-size: 1rem;
 }
+.side-page-link-list li .btn:hover {
+  opacity: 0.5;
+}
 .side-page-link-list li.next .btn {
   background-color: #1892e2;
   padding: 1.2rem 0.05rem;
 }
 @media screen and (max-width: 800px) {
-  .side-page-link-list li.next {
-    width: 80%;
+  .side-page-link-list li.next .btn {
+    padding: 0.5rem 0.05rem;
   }
 }
 .wrapp,
@@ -169,15 +179,13 @@ input.error {
 @media screen and (max-width: 800px) {
   .wrapp,
   .wrapp-pc-only {
-    width: 65%;
+    width: calc(100% + 100px);
+    margin-left: -135px;
   }
 }
 .wrapp:after,
 .wrapp-pc-only:after {
   display: block;
-}
-.side-page-link-list li .btn:hover {
-  opacity: 0.5;
 }
 :focus {
   outline: none;

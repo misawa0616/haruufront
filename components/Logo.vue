@@ -32,7 +32,7 @@
     opacity: 0;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 800px) {
   .NuxtLogo {
     display: none;
   }

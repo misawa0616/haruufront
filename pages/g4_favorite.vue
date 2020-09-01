@@ -131,6 +131,11 @@ export default {
   width: 24%;
   display: inline-block;
 }
+@media screen and (max-width: 767px) {
+  .favorite-tag {
+    width: 48%;
+  }
+}
 .favorite-tag-add {
   margin-left: 1%;
   width: 22%;

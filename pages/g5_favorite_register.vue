@@ -35,7 +35,7 @@
                         id="id_favorite_title"
                         v-model="favoriteTitle"
                         v-bind:class="{ error: favoriteTitleErrors }"
-                        class="favorite-input-title__body favorite-input-title__color"
+                        class="input-base favorite-input-title"
                       />
                     </div>
                   </td>
@@ -57,7 +57,7 @@
                         id="id_favorite_url"
                         v-model="favoriteUrl"
                         v-bind:class="{ error: favoriteUrlErrors }"
-                        class="favorite-input-url"
+                        class="input-base favorite-input-url"
                       />
                     </div>
                   </td>
@@ -65,12 +65,20 @@
               </table>
             </div>
           </div>
-          <ul class="side-page-link-list">
+          <ul class="side-page-link-list pc-only">
             <li class="return">
               <button v-on:click="clickBack" class="btn">戻る</button>
             </li>
             <li class="next">
               <button v-on:click="clickNext" class="btn">登録</button>
+            </li>
+          </ul>
+          <ul class="side-page-link-list sp-only">
+            <li class="next">
+              <button v-on:click="clickNext" class="btn">登録</button>
+            </li>
+            <li class="return">
+              <button v-on:click="clickBack" class="btn">戻る</button>
             </li>
           </ul>
         </div>
@@ -170,31 +178,20 @@ a {
 .favorite_register {
   display: flex;
 }
-.favorite-input-title__body {
-  border-radius: 0.2rem;
-  height: 2.5rem;
-  font-family: inherit;
-  font-size: 1rem;
+.favorite-input-title {
   width: 10rem;
 }
-.favorite-input-title__color {
-  border: 0.1rem #aaa solid;
+@media screen and (max-width: 767px) {
+  .favorite-input-title {
+    width: 50%;
+  }
 }
 .favorite-input-url {
-  border: 0.1rem #aaa solid;
-  border-radius: 0.2rem;
-  height: 2.5rem;
-  font-family: inherit;
-  background-color: #fff;
-  font-size: 1rem;
   width: 22rem;
 }
-.favorite-input-title__color.error {
-  background-color: #fff5f5;
-  border-color: #ff8383;
-}
-.favorite-input-url.error {
-  background-color: #fff5f5;
-  border-color: #ff8383;
+@media screen and (max-width: 767px) {
+  .favorite-input-url {
+    width: 100%;
+  }
 }
 </style>

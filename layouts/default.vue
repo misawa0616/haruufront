@@ -133,6 +133,11 @@ input.error {
   left: 0;
   top: 3px;
 }
+@media screen and (max-width: 767px) {
+  .pc-only {
+    display: none !important;
+  }
+}
 .side-page-link-list {
   text-align: center;
 }
@@ -168,6 +173,27 @@ input.error {
 @media screen and (max-width: 767px) {
   .side-page-link-list li.next .btn {
     padding: 0.5rem 0.05rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .side-page-link-list li.next {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .side-page-link-list li.return .btn {
+    padding: 0.5rem 0.05rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .side-page-link-list li.return {
+    margin-top: 5%;
+    width: 60%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .sp-only {
+    display: none !important;
   }
 }
 .wrapp,

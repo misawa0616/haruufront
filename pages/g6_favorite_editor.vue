@@ -18,7 +18,7 @@
         <div class="wrapp-pc-only">
           <div class="common-block">
             <div class="common-table-block color-none">
-              <table>
+              <table class="pc-only">
                 <tr v-for="(tag, index) in tags" :key="index">
                   <th
                     class="g6-th"
@@ -39,7 +39,7 @@
                         maxlength="128"
                         v-model="tags[index].favoriteTitle"
                         v-bind:class="{ error: tagsErrors[index].favoriteTitleErrors, 'is-delete': tags[index].deleteTag }"
-                        class="favorite-input-title__body favorite-input-title__color"
+                        class="input-base favorite-input-title"
                         autocomplete="off"
                       />
                     </div>
@@ -63,7 +63,7 @@
                         maxlength="128"
                         v-model="tags[index].favoriteUrl"
                         v-bind:class="{ error: tagsErrors[index].favoriteUrlErrors, 'is-delete': tags[index].deleteTag}"
-                        class="favorite-input-url"
+                        class="input-base favorite-input-url"
                         autocomplete="off"
                       />
                     </div>
@@ -83,14 +83,84 @@
                   </td>
                 </tr>
               </table>
+              <table v-for="(tag, index) in tags" :key="index" class="sp-only">
+                <tr valign="bottom">
+                  <td class="favorite-cells">
+                    <div
+                      class="favorite-delete__body favorite-delete__color"
+                      @click="deleteFlag(index)"
+                    >
+                      <div class="remove icon" v-bind:class="{'is-active': tags[index].deleteTag}"></div>
+                    </div>
+                  </td>
+                  <td
+                    class="g6-th favorite-cells"
+                    v-bind:class="{ 'error': tagsErrors[index].favoriteTitleErrors }"
+                  >
+                    <div class="row-input">
+                      <template v-if="tagsErrors[index].favoriteTitleErrors">
+                        <div
+                          v-for="(favoriteTitleError, index) in tagsErrors[index].favoriteTitleErrors"
+                          :key="index"
+                        >
+                          <div class="err-msg">{{ favoriteTitleError }}</div>
+                        </div>
+                      </template>
+                      <input
+                        type="text"
+                        name="favorite_title"
+                        maxlength="128"
+                        v-model="tags[index].favoriteTitle"
+                        v-bind:class="{ error: tagsErrors[index].favoriteTitleErrors, 'is-delete': tags[index].deleteTag }"
+                        class="input-base favorite-input-title"
+                        autocomplete="off"
+                      />
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2" class="favorite-cells">
+                    <div
+                      class="row-input"
+                      v-bind:class="{ 'error': tagsErrors[index].favoriteUrlErrors }"
+                    >
+                      <template v-if="tagsErrors[index].favoriteUrlErrors">
+                        <div
+                          v-for="(favoriteUrlError, index) in tagsErrors[index].favoriteUrlErrors"
+                          :key="index"
+                        >
+                          <div class="err-msg">{{ favoriteUrlError }}</div>
+                        </div>
+                      </template>
+                      <input
+                        type="text"
+                        name="favorite_url"
+                        maxlength="128"
+                        v-model="tags[index].favoriteUrl"
+                        v-bind:class="{ error: tagsErrors[index].favoriteUrlErrors, 'is-delete': tags[index].deleteTag}"
+                        class="input-base favorite-input-url"
+                        autocomplete="off"
+                      />
+                    </div>
+                  </td>
+                </tr>
+              </table>
             </div>
           </div>
-          <ul class="side-page-link-list">
+          <ul class="side-page-link-list pc-only">
             <li class="return">
               <button v-on:click="clickBack" class="btn">戻る</button>
             </li>
             <li class="next">
               <button v-on:click="clickNext" class="btn">保存</button>
+            </li>
+          </ul>
+          <ul class="side-page-link-list sp-only">
+            <li class="next">
+              <button v-on:click="clickNext" class="btn">保存</button>
+            </li>
+            <li class="return">
+              <button v-on:click="clickBack" class="btn">戻る</button>
             </li>
           </ul>
         </div>
@@ -215,7 +285,6 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10%;
 }
 .favorite-delete__color {
   background-color: #0001ff66;
@@ -226,36 +295,26 @@ a {
 .favorite-delete__color:hover {
   background-color: rgb(0 84 255 / 40%);
 }
-.favorite-input-title__body {
-  border-radius: 0.2rem;
-  height: 2.5rem;
-  font-family: inherit;
-  font-size: 1rem;
+.favorite-input-title {
   width: 10rem;
 }
-.favorite-input-title__color {
-  border: 0.1rem #aaa solid;
-}
-.favorite-input-title__color.error {
-  background-color: #fff5f5;
-  border-color: #ff8383;
-}
-.favorite-input-title__color.is-delete {
-  background-color: #747272;
-  border-color: #747272;
+@media screen and (max-width: 767px) {
+  .favorite-input-title {
+    width: 100%;
+  }
 }
 .favorite-input-url {
-  border: 0.1rem #aaa solid;
-  border-radius: 0.2rem;
-  height: 2.5rem;
-  font-family: inherit;
-  background-color: #fff;
-  font-size: 1rem;
   width: 22rem;
 }
-.favorite-input-url.error {
-  background-color: #fff5f5;
-  border-color: #ff8383;
+@media screen and (max-width: 767px) {
+  .favorite-input-url {
+    width: calc(100%);
+    margin-bottom: 10%;
+  }
+}
+.favorite-input-title.is-delete {
+  background-color: #747272;
+  border-color: #747272;
 }
 .favorite-input-url.is-delete {
   background-color: #747272;
@@ -266,5 +325,15 @@ a {
 }
 .g6-th.error {
   padding-top: 0;
+}
+@media screen and (max-width: 767px) {
+  .favorite-cells {
+    display: table-cell;
+  }
+}
+@media screen and (max-width: 767px) {
+  .common-table-block table td {
+    padding: 0;
+  }
 }
 </style>

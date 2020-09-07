@@ -99,16 +99,20 @@
               </table>
             </div>
           </div>
-          <ul class="side-page-link-list">
+          <ul class="side-page-link-list pc-only">
             <li class="return">
-              <button v-on:click="clickBack" class="btn">
-                <strong>戻る</strong>
-              </button>
+              <button v-on:click="clickBack" class="btn">戻る</button>
             </li>
             <li class="next">
-              <button v-on:click="clickNext" class="btn">
-                <strong>次へ</strong>
-              </button>
+              <button v-on:click="clickNext" class="btn">変更</button>
+            </li>
+          </ul>
+          <ul class="side-page-link-list sp-only">
+            <li class="next">
+              <button v-on:click="clickNext" class="btn">変更</button>
+            </li>
+            <li class="return">
+              <button v-on:click="clickBack" class="btn">戻る</button>
             </li>
           </ul>
         </div>

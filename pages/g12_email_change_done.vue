@@ -1,5 +1,5 @@
 <template>
-  <div class="login">
+  <div class="email_change_done">
     <navi />
     <div class="main">
       <section class="section-area">
@@ -31,4 +31,7 @@ export default {
 };
 </script>
 <style>
+.email_change_done {
+  display: flex;
+}
 </style>

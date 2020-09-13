@@ -155,7 +155,7 @@ export default {
             password: this.password,
           })
           .then((res) => {
-            this.$router.push("/g8_user_register_done");
+            this.$router.push("/g32_user_register_done");
           })
           .catch((e) => {
             if (e.response.data.email) {

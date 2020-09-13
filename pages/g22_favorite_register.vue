@@ -134,7 +134,7 @@ export default {
       window.scrollTo(0, 0);
     },
     clickBack() {
-      this.$router.push("/g4_favorite");
+      this.$router.push("/g21_favorite");
     },
     clickNext() {
       this.clearError();
@@ -147,7 +147,7 @@ export default {
             favoriteUrl: this.favoriteUrl,
           })
           .then((res) => {
-            this.$router.push("/g4_favorite");
+            this.$router.push("/g21_favorite");
           })
           .catch((e) => {
             if (e.response.data.favoriteUrl) {

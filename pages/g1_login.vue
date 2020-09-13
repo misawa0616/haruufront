@@ -152,7 +152,7 @@ export default {
           })
           .then((res) => {
             localStorage.setItem("token", res.data.key);
-            this.$router.push("/g4_favorite");
+            this.$router.push("/g21_favorite");
           })
           .catch((e) => {
             if (e.response.data.email) {

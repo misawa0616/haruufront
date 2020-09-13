@@ -205,7 +205,7 @@ export default {
             afterChangeEmail: this.afterChangeEmail,
           })
           .then((res) => {
-            this.$router.push("/g3_send_email_change");
+            this.$router.push("/g12_email_change_done");
           })
           .catch((e) => {
             if (e.response.data.afterChangeEmail) {

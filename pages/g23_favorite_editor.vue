@@ -240,7 +240,7 @@ export default {
       window.scrollTo(0, 0);
     },
     clickBack() {
-      this.$router.push("/g4_favorite");
+      this.$router.push("/g21_favorite");
     },
     clickNext() {
       this.clearError();
@@ -250,7 +250,7 @@ export default {
         this.$axios
           .post(url, this.tags)
           .then((res) => {
-            this.$router.push("/g4_favorite");
+            this.$router.push("/g21_favorite");
           })
           .catch((e) => {
             if (e.response.data.nonFieldErrors) {

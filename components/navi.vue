@@ -18,10 +18,10 @@
       v-bind:class="{'is-active': isOpen}"
     >
       <div class="navbar-start">
-        <nuxt-link class="navbar-item__body navbar-item__color" to="/g4_favorite">
+        <nuxt-link class="navbar-item__body navbar-item__color" to="/g21_favorite">
           <strong>ホーム</strong>
         </nuxt-link>
-        <nuxt-link class="navbar-item__body navbar-item__color" to="/g2_email_change">
+        <nuxt-link class="navbar-item__body navbar-item__color" to="/g11_email_change">
           <strong>メールアドレス</strong>
         </nuxt-link>
       </div>
@@ -30,7 +30,7 @@
           <nuxt-link class="navbar-button__body navbar-button__primary" to="/g1_login">
             <strong>サインイン</strong>
           </nuxt-link>
-          <nuxt-link class="navbar-button__body navbar-button__primary" to="/g7_user_register">
+          <nuxt-link class="navbar-button__body navbar-button__primary" to="/g31_user_register">
             <strong>サインアップ</strong>
           </nuxt-link>
           <button v-if="isLogin" class="navbar-button__body navbar-button__primary" @click="logout">

@@ -19,11 +19,11 @@
           </a>
         </div>
         <div class="favorite-tag-add">
-          <nuxt-link class="favorite-add__body favorite-add__color" to="/g5_favorite_register">+</nuxt-link>
+          <nuxt-link class="favorite-add__body favorite-add__color" to="/g22_favorite_register">+</nuxt-link>
         </div>
         <div>
           <div class="favorite-tag-add">
-            <nuxt-link class="favorite-add__body favorite-add__color" to="/g6_favorite_editor">
+            <nuxt-link class="favorite-add__body favorite-add__color" to="/g23_favorite_editor">
               <div class="edit icon"></div>
             </nuxt-link>
           </div>

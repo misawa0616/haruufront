@@ -25,7 +25,7 @@ export default {
   name: "EmailChangeConfirm",
   methods: {
     clickNext() {
-      this.$router.push("/g4_favorite");
+      this.$router.push("/g21_favorite");
     },
   },
 };

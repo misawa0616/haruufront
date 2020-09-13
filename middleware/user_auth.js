@@ -1,14 +1,10 @@
-export default function ({ $axios, store, redirect, router }) {
-    let url = "/api/v1/test/";
+export default ({ store, redirect }) => {
     return new Promise((resolve) => {
-        $axios.get(url)
-            .then(function (res) {
-                store.dispatch("user/updateUserAction", res.data);
-                return resolve()
-            })
-            .catch(function (e) {
-                store.dispatch("message/updateMessageAction", "有効なログイン情報を取得できませんでした。ログインしてください。");
-                return redirect('/g1_login')
-            })
+        if (store.getters['user/getIsLogin']) {
+            return resolve()
+        } else {
+            store.dispatch("message/updateMessageAction", "有効なログイン情報を取得できませんでした。ログインしてください。");
+            return redirect('/g1_login')
+        }
     });
 }

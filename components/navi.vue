@@ -27,12 +27,23 @@
       </div>
       <div class="navbar-end">
         <div class="navbar-item__body navbar-item__color">
-          <nuxt-link class="navbar-button__body navbar-button__primary" to="/g7_user_register">
-            <strong>サインアップ</strong>
-          </nuxt-link>
           <nuxt-link class="navbar-button__body navbar-button__primary" to="/g1_login">
             <strong>サインイン</strong>
           </nuxt-link>
+          <nuxt-link class="navbar-button__body navbar-button__primary" to="/g7_user_register">
+            <strong>サインアップ</strong>
+          </nuxt-link>
+          <button v-if="isLogin" class="navbar-button__body navbar-button__primary" @click="logout">
+            <strong>サインアウト</strong>
+          </button>
+          <!-- <nuxt-link
+            v-if="isLogin"
+            class="navbar-button__body navbar-button__primary"
+            to="/g1_login"
+            @click.native="logout"
+          >
+            <strong>サインアウト</strong>
+          </nuxt-link>-->
         </div>
       </div>
     </div>
@@ -45,6 +56,25 @@ export default {
     return {
       isOpen: false,
     };
+  },
+  computed: {
+    isLogin: function () {
+      return this.$store.getters["user/getIsLogin"];
+    },
+  },
+  methods: {
+    logout() {
+      this.$axios
+        .post("/api/v1/rest_auth/logout/")
+        .then((res) => {
+          localStorage.removeItem("token");
+          location.href = "./g1_login";
+        })
+        .catch((e) => {
+          localStorage.removeItem("token");
+          location.href = "./g1_login";
+        });
+    },
   },
 };
 </script>

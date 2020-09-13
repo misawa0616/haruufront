@@ -1,9 +1,13 @@
 export const state = () => ({
-    user: null
+    user: null,
+    isLogin: false
 })
 export const getters = ({
     getUser(state) {
         return state.user
+    },
+    getIsLogin(state) {
+        return state.isLogin
     }
 })
 export const mutations = {
@@ -12,7 +16,10 @@ export const mutations = {
     },
     updateFavoriteTag(state, payload) {
         state.user.favoriteTag = payload
-    }
+    },
+    updateIsLogin(state, payload) {
+        state.isLogin = payload
+    },
 }
 export const actions = {
     updateUserAction(context, payload) {
@@ -20,5 +27,8 @@ export const actions = {
     },
     updateFavoriteTagAction(context, payload) {
         context.commit('updateFavoriteTag', payload)
+    },
+    updateIsLoginAction(context, payload) {
+        context.commit('updateIsLogin', payload)
     },
 }

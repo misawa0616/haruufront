@@ -4,6 +4,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  middleware: ["test"],
+};
+</script>
+
 <style>
 @font-face {
   font-family: icon;

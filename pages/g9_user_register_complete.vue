@@ -40,7 +40,7 @@ export default {
   beforeMount() {
     axios
       .get(
-        "http://192.168.0.7:8000/api/v1/confirm_user/" +
+        "https://favoritetag.xyz/api/v1/confirm_user/" +
           this.$route.query.token +
           "/"
       )

@@ -40,9 +40,7 @@ export default {
   beforeMount() {
     axios
       .get(
-        "https://favoritetag.xyz/api/v1/confirm_user/" +
-          this.$route.query.token +
-          "/"
+        "https://favoritetag.xyz/api/v1/confirm_user/" + this.$route.query.token
       )
       .then((res) => {
         this.messages = res.data.detail;

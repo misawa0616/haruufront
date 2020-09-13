@@ -110,8 +110,6 @@ const axios = axiosBase.create({
     "Content-Type": "application/json",
   },
 });
-let url = "https://favoritetag.xyz/api/v1/user_register/";
-
 export default {
   data: function () {
     return {
@@ -152,12 +150,12 @@ export default {
       this.clearError();
       if (this.validate()) {
         axios
-          .post(url, {
+          .post("https://favoritetag.xyz/api/v1/user_register/", {
             email: this.email,
             password: this.password,
           })
           .then((res) => {
-            this.$router.push("/g8_user_done");
+            this.$router.push("/g8_user_register_done");
           })
           .catch((e) => {
             if (e.response.data.email) {
@@ -183,12 +181,13 @@ export default {
       this.$store.dispatch("message/updateMessageAction", "");
     }
   },
-  beforeUpdate() {
-    if (this.$store.getters["message/getMessage"]) {
-      this.messages = [this.$store.getters["message/getMessage"]];
-      this.$store.dispatch("message/updateMessageAction", "");
-    }
-  },
+  // ↓未認証時かつユーザー登録画面から認証が必要な画面に遷移試行時、エラーがちらつくかつ表示されない
+  // beforeUpdate() {
+  //   if (this.$store.getters["message/getMessage"]) {
+  //     this.messages = [this.$store.getters["message/getMessage"]];
+  //     this.$store.dispatch("message/updateMessageAction", "");
+  //   }
+  // },
 };
 </script>
 <style scoped>

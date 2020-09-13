@@ -109,8 +109,6 @@ const axios = axiosBase.create({
     "Content-Type": "application/json",
   },
 });
-let url = "https://favoritetag.xyz/api/v1/rest_auth/login/";
-
 export default {
   data: function () {
     return {
@@ -148,7 +146,7 @@ export default {
       this.clearError();
       if (this.validate()) {
         axios
-          .post(url, {
+          .post("https://favoritetag.xyz/api/v1/rest_auth/login/", {
             email: this.email,
             password: this.password,
           })

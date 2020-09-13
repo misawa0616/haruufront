@@ -36,7 +36,8 @@
           <button v-if="isLogin" class="navbar-button__body navbar-button__primary" @click="logout">
             <strong>サインアウト</strong>
           </button>
-          <!-- <nuxt-link
+          <!-- ↓ログアウトボタン押下後、すぐにログアウトボタンがきえない
+          <nuxt-link
             v-if="isLogin"
             class="navbar-button__body navbar-button__primary"
             to="/g1_login"

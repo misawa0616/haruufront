@@ -32,7 +32,7 @@ export default {
   build: {
   },
   axios: {
-    baseURL: 'https://favoritetag.xyz'
+    baseURL: 'http://192.168.0.7:8000'
   },
   auth: {
     strategies: {

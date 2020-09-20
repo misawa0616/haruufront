@@ -16,11 +16,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
     ]
   },
-  css: [
-  ],
   components: true,
-  buildModules: [
-  ],
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/auth',
@@ -33,19 +29,7 @@ export default {
     ]
   ],
   plugins: ['~/plugins/axios'],
-  build: {
-  },
   axios: {
     baseURL: process.env.NODE_ENV !== 'production' ? "http://localhost:8000" : "https://favoritetag.xyz"
-  },
-  auth: {
-    strategies: {
-      local: {
-        endpoints: {
-          login: { url: '/api/v1/rest_auth/login', method: 'post', propertyName: 'key' },
-          logout: { url: '/api/v1/rest_auth/logout', method: 'post' }
-        }
-      }
-    }
   },
 }

@@ -141,7 +141,7 @@ export default {
   },
   methods: {
     clickBack() {
-      this.$router.push("/g4_favorite");
+      this.$router.push("/g21_favorite");
     },
     clearError() {
       this.messages = "";

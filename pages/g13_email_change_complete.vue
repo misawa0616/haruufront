@@ -3,7 +3,7 @@
     <navi />
     <div class="main">
       <section class="section-area">
-        <div class="wrapp-pc-only">
+        <div class="wrapp">
           <div class="common-block">
             <div class="common-table-block color-none">{{ messages }}</div>
           </div>

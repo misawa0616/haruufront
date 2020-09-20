@@ -2,7 +2,7 @@
   <div class="favorite">
     <navi />
     <div class="main">
-      <div class="wrapp-pc-only">
+      <div class="wrapp">
         <br />
         <strong>お気に入り</strong>
         <hr />

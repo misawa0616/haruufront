@@ -202,27 +202,24 @@ input.error {
     display: none !important;
   }
 }
-.wrapp,
-.wrapp-pc-only {
+.wrapp {
   margin: auto;
   width: 40rem;
   margin-left: calc(50% - 500px);
 }
 @media screen and (max-width: 1200px) {
-  .wrapp,
-  .wrapp-pc-only {
+  .wrapp {
     margin-left: 0;
   }
 }
 @media screen and (max-width: 767px) {
-  .wrapp,
-  .wrapp-pc-only {
+  .wrapp {
     width: calc(100% + 100px);
     margin-left: -135px;
   }
 }
 .wrapp:after,
-.wrapp-pc-only:after {
+:after {
   display: block;
 }
 :focus {

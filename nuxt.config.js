@@ -27,12 +27,16 @@ export default {
     ['@nuxtjs/redirect-module', [
       { from: '^/redirect-top', to: '/' },
     ]],
+    [
+      '@nuxtjs/dotenv',
+      { filename: process.env.NODE_ENV !== 'production' ? "./config/.env.dev" : "./config/.env.prod" }
+    ]
   ],
   plugins: ['~/plugins/axios'],
   build: {
   },
   axios: {
-    baseURL: 'https://favoritetag.xyz'
+    baseURL: process.env.NODE_ENV !== 'production' ? "http://localhost:8000" : "https://favoritetag.xyz"
   },
   auth: {
     strategies: {

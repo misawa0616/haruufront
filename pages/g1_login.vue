@@ -146,7 +146,7 @@ export default {
       this.clearError();
       if (this.validate()) {
         axios
-          .post("https://favoritetag.xyz/api/v1/rest_auth/login/", {
+          .post(process.env.BASE_URL + "/api/v1/rest_auth/login/", {
             email: this.email,
             password: this.password,
           })

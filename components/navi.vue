@@ -69,11 +69,11 @@ export default {
         .post("/api/v1/rest_auth/logout/")
         .then((res) => {
           localStorage.removeItem("token");
-          location.href = "./g1_login";
+          this.$router.push("/g1_login");
         })
         .catch((e) => {
           localStorage.removeItem("token");
-          location.href = "./g1_login";
+          this.$router.push("/g1_login");
         });
     },
   },

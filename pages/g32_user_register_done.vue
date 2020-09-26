@@ -1,5 +1,5 @@
 <template>
-  <div class="user_register_done">
+  <div class="user_register_done content">
     <navi />
     <div class="main">
       <section class="section-area">
@@ -28,8 +28,3 @@ export default {
   },
 };
 </script>
-<style>
-.user_register_done {
-  display: flex;
-}
-</style>

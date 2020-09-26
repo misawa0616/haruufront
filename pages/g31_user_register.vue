@@ -1,5 +1,5 @@
 <template>
-  <div class="user_register">
+  <div class="user_register content">
     <navi />
     <div class="main">
       <br />
@@ -190,8 +190,3 @@ export default {
   // },
 };
 </script>
-<style scoped>
-.user_register {
-  display: flex;
-}
-</style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="favorite_register">
+  <div class="favorite_register content">
     <navi />
     <div class="main">
       <section class="note-error-area">
@@ -173,9 +173,6 @@ a {
   border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-}
-.favorite_register {
   display: flex;
 }
 .favorite-input-title {

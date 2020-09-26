@@ -1,5 +1,5 @@
 <template>
-  <div class="favorite">
+  <div class="favorite content">
     <navi />
     <div class="main">
       <div class="wrapp">
@@ -46,9 +46,6 @@ export default {
 </script>
 
 <style>
-.favorite {
-  display: flex;
-}
 .favorite-add__body {
   border-radius: 50% !important;
   display: inline-block;
@@ -72,13 +69,9 @@ export default {
   background-color: rgb(0 84 255 / 40%);
 }
 .favorite-button__body {
-  border: 1px solid transparent;
   border-radius: 4px;
   border-width: 1px;
-  box-shadow: none;
-  cursor: pointer;
   display: inline-flex;
-  font-size: 100%;
   width: 80%;
   padding: 3%;
   margin-bottom: 10%;

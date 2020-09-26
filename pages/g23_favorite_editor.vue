@@ -1,5 +1,5 @@
 <template>
-  <div class="g6_favorite_editor">
+  <div class="g6_favorite_editor content">
     <navi />
     <div class="main">
       <section class="note-error-area">
@@ -266,9 +266,6 @@ export default {
 </script>
 
 <style scoped>
-.g6_favorite_editor {
-  display: flex;
-}
 a {
   border-radius: 5px;
   display: -webkit-box;

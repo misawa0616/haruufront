@@ -63,6 +63,15 @@ section {
   font: inherit;
   vertical-align: baseline;
 }
+.btn {
+  transition: opacity 0.3s;
+  width: 100%;
+  padding: 1rem 0.1rem;
+  color: #fff;
+  border-radius: 4px;
+  background-color: #aaa;
+  font-size: 1rem;
+}
 .common-block {
   margin-bottom: 2rem;
 }
@@ -161,7 +170,6 @@ input.error {
   vertical-align: bottom;
 }
 .side-page-link-list li .btn {
-  transition: opacity 0.3s;
   width: 100%;
   padding: 1rem 0.1rem;
   color: #fff;
@@ -281,5 +289,8 @@ input.error {
 }
 .remove.icon.is-active:after {
   transform: none;
+}
+.content {
+  display: flex;
 }
 </style>

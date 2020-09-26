@@ -1,5 +1,5 @@
 <template>
-  <div class="email_change_complete">
+  <div class="email_change_complete content">
     <navi />
     <div class="main">
       <section class="section-area">
@@ -52,8 +52,3 @@ export default {
   },
 };
 </script>
-<style>
-.email_change_complete {
-  display: flex;
-}
-</style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="email_change_done">
+  <div class="email_change_done content">
     <navi />
     <div class="main">
       <section class="section-area">
@@ -30,8 +30,3 @@ export default {
   },
 };
 </script>
-<style>
-.email_change_done {
-  display: flex;
-}
-</style>

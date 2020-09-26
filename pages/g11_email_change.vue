@@ -1,5 +1,5 @@
 <template>
-  <div class="email_change">
+  <div class="email_change content">
     <navi />
     <div class="main">
       <section class="note-error-area">
@@ -231,9 +231,6 @@ a {
   border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-}
-.email_change {
   display: flex;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="login">
+  <div class="login content">
     <navi />
     <div class="main">
       <div class="wrapp">
@@ -187,9 +187,6 @@ export default {
 };
 </script>
 <style scoped>
-.login {
-  display: flex;
-}
 @media screen and (max-width: 767px) {
   .sub-logo {
     display: none;

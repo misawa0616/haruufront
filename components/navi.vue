@@ -1,39 +1,64 @@
 <template>
-  <div class="navbar-main" v-bind:class="{'is-active': isOpen}">
+  <div class="navbar-main" v-bind:class="{ 'is-active': isOpen }">
     <a
       class="navbar-burger__body navbar-burger__color"
       aria-label="menu"
       aria-expanded="false"
       data-target="navbarBasicExample"
       @click="isOpen = !isOpen"
-      v-bind:class="{'is-active': isOpen}"
+      v-bind:class="{ 'is-active': isOpen }"
     >
-      <span class="navbar-burger-line__body navbar-burger-line__color" aria-hidden="true"></span>
-      <span class="navbar-burger-line__body navbar-burger-line__color" aria-hidden="true"></span>
-      <span class="navbar-burger-line__body navbar-burger-line__color" aria-hidden="true"></span>
+      <span
+        class="navbar-burger-line__body navbar-burger-line__color"
+        aria-hidden="true"
+      ></span>
+      <span
+        class="navbar-burger-line__body navbar-burger-line__color"
+        aria-hidden="true"
+      ></span>
+      <span
+        class="navbar-burger-line__body navbar-burger-line__color"
+        aria-hidden="true"
+      ></span>
     </a>
     <div
       id="navbarBasicExample"
       class="navbar-menu__body navbar-menu__color"
-      v-bind:class="{'is-active': isOpen}"
+      v-bind:class="{ 'is-active': isOpen }"
     >
       <div class="navbar-start">
-        <nuxt-link class="navbar-item__body navbar-item__color" to="/g21_favorite">
+        <nuxt-link
+          class="navbar-item__body navbar-item__color"
+          to="/g21_favorite"
+        >
           <strong>ホーム</strong>
         </nuxt-link>
-        <nuxt-link class="navbar-item__body navbar-item__color" to="/g11_email_change">
+        <nuxt-link
+          class="navbar-item__body navbar-item__color"
+          to="/g11_email_change"
+        >
           <strong>メールアドレス</strong>
         </nuxt-link>
       </div>
       <div class="navbar-end">
         <div class="navbar-item__body navbar-item__color">
-          <nuxt-link class="navbar-button__body navbar-button__primary" to="/g1_login">
+          <nuxt-link
+            class="navbar-button__body navbar-button__primary"
+            to="/g1_login"
+          >
             <strong>サインイン</strong>
           </nuxt-link>
-          <nuxt-link class="navbar-button__body navbar-button__primary" to="/g31_user_register">
+          <nuxt-link
+            class="navbar-button__body navbar-button__primary"
+            to="/g31_user_register"
+          >
             <strong>サインアップ</strong>
           </nuxt-link>
-          <button v-if="isLogin" class="navbar-button__body navbar-button__primary" @click="logout">
+          <button
+            v-if="isLogin"
+            class="navbar-button__body navbar-button__primary"
+            @click="logout"
+          >
             <strong>サインアウト</strong>
           </button>
           <!-- ↓ログアウトボタン押下後、すぐにログアウトボタンがきえない
@@ -69,11 +94,11 @@ export default {
         .post("/api/v1/rest_auth/logout/")
         .then((res) => {
           localStorage.removeItem("token");
-          this.$router.push("/g1_login");
+          location.href = "/g1_login";
         })
         .catch((e) => {
           localStorage.removeItem("token");
-          this.$router.push("/g1_login");
+          location.href = "/g1_login";
         });
     },
   },
